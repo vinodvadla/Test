@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 // Define a simple route to handle a GET request
 app.get("/", (req, res) => {
-  res.send("Hello, World! cicd");
+  res.send("Hello, World! cicd testing");
 });
 
 // Define another route for a different path
