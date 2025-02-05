@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 // Define another route for a different path
 app.get("/about", (req, res) => {
-  res.send("This is a simple Express app.");
+  res.send("This is a simple Express app. working fine");
 });
 
 // Start the server
