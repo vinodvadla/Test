@@ -29,9 +29,9 @@ jobs:
         run: |
           # SSH into the EC2 instance and perform deployment
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-            cd /home/ubuntu/my-node-app  # Navigate to the directory where your app is located
+            cd Test  # Navigate to the directory where your app is located
             git pull origin main  # Pull the latest code from GitHub
             npm install  # Install dependencies
-            pm2 restart my-node-app || pm2 start index.js --name my-node-app  # Restart or start the app with pm2
+            pm2 restart test || pm2 start index.js --name my-node-app  # Restart or start the app with pm2
             pm2 save  # Save the pm2 process list
           EOF
