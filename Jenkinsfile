@@ -1,18 +1,12 @@
 pipeline {
-    agent any
-    tools {
-        nodejs "NodeJS 18"
-    }
-    stages {
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
+  agent any
+  stages {
+    stage('Test Token') {
+      steps {
+        withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+          sh 'echo "Token is $GITHUB_TOKEN"'
         }
-        stage('Run Tests') {
-            steps {
-                sh 'npm test'
-            }
-        }
+      }
     }
+  }
 }
