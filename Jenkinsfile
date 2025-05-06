@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Test Token') {
       steps {
-        withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+        withCredentials([string(credentialsId: 'GITHUB_SECRET', variable: 'GITHUB_TOKEN')]) {
           sh 'echo "Token is $GITHUB_TOKEN"'
         }
       }
