@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 // Define a simple route to handle a GET request
 app.get("/", (req, res) => {
-  res.send("Hello, World! cicd testing1 wwqjkdj");
+  res.send("Hey there this is the second jenkins");
 });
 
 // Define another route for a different path
@@ -19,5 +19,5 @@ app.get("/about", (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT} CICD WORKING 12345`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
