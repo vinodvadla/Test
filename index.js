@@ -6,9 +6,6 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-
-
-
 // Middleware to serve static files (optional, if needed)
 app.use(express.static("public"));
 
